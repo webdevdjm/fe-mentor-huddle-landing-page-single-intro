@@ -33,14 +33,16 @@ h1 {
   font-family: "Poppins", sans-serif;
   margin: 1em 0;
 }
-
+p {
+  line-height: 1.8;
+}
 img {
   max-width: 100%;
 }
 
 .container {
   margin: auto;
-  max-width: 100%;
+  max-width: 90%;
   width: 1200px;
 }
 
@@ -48,12 +50,12 @@ img {
   display: flex;
   margin: 20px 0;
 
-  div:first-child {
+  .image {
     flex: 0.6;
     margin-right: 20px;
   }
 
-  div:last-child {
+  .content {
     flex: 0.4;
     margin-left: 20px;
   }
@@ -68,6 +70,10 @@ button {
   padding: 15px 75px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   margin: 1em 0;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .social-icons {
@@ -87,5 +93,36 @@ button {
     height: 40px;
     width: 40px;
     text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    margin: 50px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .logo {
+    width: 150px;
+    margin-top: 50px;
+  }
+  p {
+    font-size: 1rem;
+    
+  }
+  .image {
+    flex: 1;
+    margin-right: 0;
+  }
+  .content {
+    flex: 1;
+    margin-left: 0;
+    text-align: center;
+  }
+  .social-icons {
+    justify-content: center;
+    margin-bottom: 1em;
   }
 }
